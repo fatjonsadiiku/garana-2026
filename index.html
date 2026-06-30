@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+             <div class="logo">
+                <img style="width: 120px;height: 120px; margin-top: -8px;" src="0d650375-0602-4ea1-99d9-07ef3db44a28.png">
+            </div>
+
+            <ul>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="tradita.html">Tradita</a></li>
+                <li><a href="xhamit.html">Xhamitë</a></li>
+                 <li><a href="liqen.html">Liqeni dhe Lumi</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+   
+    <div class="mire" id="home">
+        <h1>Mirësevini në fshatin <br>Garanë</h1>
+    </div>
+    
+</div>
+    <div class="foto">
+        <img src="Screenshot 2026-05-28 152345.png">
+    </div>
+      <div class="scroll-indicator" onclick="document.getElementById('poshte').scrollIntoView({behavior:'smooth'})">
+        <span>▼</span>
+    </div>
+    <section id="poshte">
+   
+ <button id="toggleBtn" onclick="toggleMode()">
+     Ndrysho ngjyrën
+</button>
+    <div class="cards">
+         <!-- historia -->
+   <div class="card">
+    <img id="fotoHistoria" src="Screenshot 2026-05-28 151909.png" alt="Historia e fshatit">
+
+    <h3>Historia</h3>
+    <p>Garana ka një histori të lashtë, dhe të ruajtur ndër vite!</p>
+
+  <a href="historia.html" id="venom">Mëso më shumë...</a>
+
+    <h2 id="historia">0</h2>
+      <p id="vit">Vite Histori:</p>
+</div>
+        <!-- Tradita -->
+    <div class="card">
+         <img id="fotoHistoria" src="Screenshot 2026-06-12 153015.png" alt="Tradita e fshatit">
+        <h3>Tradita</h3>
+        
+        <p>Garana ka një traditë futbolli poashtu dhe fetare!</p> 
+        <a href="tradita.html" id="venom">Mëso më shumë...</a>
+         <!-- <a href="tradita.html">Mëso më shumë...</a> -->
+         <h2 id="tradita">0</h2>
+        <p id="vit">Vite Traditë:</p>
+    </div>
+     
+   
+    <!-- Xhamit -->
+    <div class="card">
+         <img id="fotoHistoria" src="Screenshot 2026-06-09 232203.png" alt="Historia e fshatit">
+        <h3>Xhamitë</h3>
+        <p>Garana ka numërin më të madh të xhamive, duke numëruar 3 xhami!</p>
+    <a href="xhamit.html" id="venom">Mëso më shumë...</a>
+         <h2 id="xhamia">0</h2>
+        <p id="vit">Vite Xhamit:</p>
+    </div>
+    
+</section>
+</div> 
+  <p id="data"11.06.2026></p>
+    <!-- <h2 class="section-title">Informata:</h2> -->
+    
+
+    <div class="lokacioni">
+        <h1>Lokacioni i Fshatit Garanë 📍</h1>
+
+        <!-- Mapa ktou osht -->
+        <iframe src="https://www.google.com/maps?q=Garane,Kercove&output=embed" loading="lazy" allowfullscreen>
+        </iframe>
+
+        
+        <!-- Hap direkt ne google-->
+         <div class="hap">
+            <!-- <a href="https://maps.google.com/?q=Garane,Kercove" target="_blank">Hap në Google Maps</a>
+                
+            </a> -->
+            <a id="googleMapsBtn"
+   href="https://maps.google.com/?q=Garane,Kercove"
+   target="_blank">
+   Hap në Google Maps
+</a>
+        </div>
+    </div>
+      
+    
+    <footer>&copy; Made by Fatjon Sadiku 2026 / Email: sadikufatjon078@gmail.com 
+        <br>
+        <br>
+        Faleminderit që vizituat faqen e fshatit Garanë!
+      <!-- <p id="kontakti">  Kontakt :</p> -->
+
+       
+        <div id="kontakt">
+        <a href="https://mail.google.com/mail/?view=cm&to=sadikufatjon078@gmail.com">
+            Na kontakto
+        </a>
+        </div>
+        
+
+    </footer>
+   
+    <script>
+
+const btn = document.getElementById("toggleBtn");
+
+// fillon me light
+document.body.classList.add("light");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("green");
+  document.body.classList.toggle("light");
+});
+    let numriTradita = 0;
+let numriXhamia = 0;
+let numriHistoria = 0;
+
+// TRADITA
+let intervalTradita = setInterval(function () {
+    numriTradita++;
+    document.getElementById("tradita").innerText = numriTradita;
+
+    if (numriTradita >= 5) {
+        clearInterval(intervalTradita);
+    }
+}, 630);
+
+
+
+// HISTORIA
+let intervalHistoria = setInterval(function () {
+    numriHistoria++;
+    document.getElementById("historia").innerText = numriHistoria;
+
+    if (numriHistoria >= 700) {
+        clearInterval(intervalHistoria);
+    }
+}, 10);
+// XHAMIA
+let intervalXhamia = setInterval(function () {
+    numriXhamia++;
+    document.getElementById("xhamia").innerText = numriXhamia;
+
+    if (numriXhamia >= 500) {
+        clearInterval(intervalXhamia);
+    }
+}, 7);
+const teksti = "Mirësevini në fshatin Garanë";
+let i = 0;
+
+function shkruaj() {
+    if (i < teksti.length) {
+        document.querySelector(".mire h1").innerHTML += teksti.charAt(i);
+        i++;
+        setTimeout(shkruaj, 70);
+    }
+}
+
+document.querySelector(".mire h1").innerHTML = "";
+shkruaj();
+  
+      let home = "Mirësevini në fshatin Garanë";
+let p = 0;
+// window.onload = function(){
+
+//     setTimeout(function(){
+
+//         alert("Mirësevini në faqen e fshatit Garanë!");
+
+//     }, 1000);
+
+// }
+
+
+
+ window.addEventListener("scroll", function() {
+
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+
+        document.getElementById("faleminderit").innerText =
+        "Faleminderit që vizituat faqen e fshatit Garanë!";
+    }
+});
+
+  let sot = new Date();
+
+document.getElementById("data").innerText =
+"Sot është data: " + sot.toLocaleDateString();
+    </script>
+   
+</body>
+
+</html>

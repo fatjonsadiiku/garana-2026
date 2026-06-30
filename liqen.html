@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <nav>
+               <div class="logo">
+                <img style="width: 120px;height: 120px; margin-top: -8px;" src="0d650375-0602-4ea1-99d9-07ef3db44a28.png">
+            </div>
+
+            <ul>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="tradita.html">Tradita</a></li>
+                <li><a href="xhamit.html">Xhamitë</a></li>
+                 <li><a href="liqen.html">Liqeni dhe Lumi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+  <br>
+<a href="index.html" class="back-btn">
+  ← Prapa
+</a>
+<section class="liqen">
+    <div class="liqen-content">
+
+        <h1 class="title">
+            <span>L</span>I<span>Q</span>E<span>N</span>I<span>
+        </h1>
+
+        <p class="subtitle">
+            Disa informacione në lidhje me peshkimin e liqenit të Osllomes dhe Lumi:
+        </p>
+
+        <a href="#peshk" class="btn">Zbulo më shumë ↓</a>
+
+    </div>
+     
+      </section> 
+     
+
+
+<a href="index.html" class="back-btn">
+  ← Prapa
+</a>       
+<br>
+     <button id="toggleBtn" onclick="toggleMode()">
+     Ndrysho ngjyrën
+</button>
+
+     <div id="peshk" class="card">
+      <p>
+       <h2><i>Peshkimi ne liqenin e Osllomes</i></h2>
+       <br>
+       Liqeni Osllomes u takon fshatrave: Shtovë's dhe Garanë's.
+       <br>
+        Ky liqen sjell: Qetësi, fat në kapje dhe perfaqëson sportin e peshkimit.
+        <br>
+        Këtu mbahen edhe gara të cilët vinjë nga e gjithë Evropa.
+        Në këtë garë 24-orëshe marrin pjesë ekipe nga vende të ndryshme.
+      </p>
+      <img id="hunt-img" src="434722919_1489703848537100_228215700032228702_n.jpg">
+       <img id="peshk-img" src="518378235_10232749044727570_3776643281568085116_n.jpg">
+     </div>
+      
+     
+     
+      <br>
+<!--     
+      <a class="ndi" href="https://www.facebook.com/Hunter-Fish-Kichevo" target="_blank">
+    Na ndiqni në Facebook
+</a> -->
+
+     <div id="gjuetia" class="card">
+     “Gjuetia bëhet në duo që do të thotë në çift, kemi nëntë ekipe nga Maqedonia nga Manastiri, Prilepi nga Shkupi, gjithë Maqedonia, kush do paraqitet ndërsa fitues do të jetë ai çift që do të gjuajë më shumë peshk.
+
+Garuesit janë të kënaqur, pasi siç thonë liqeni është i pasur me shumëllojshmëri peshqish dhe ka pozicion gjeografik shumë të mirë.
+
+Kryetari i shoqatës “Hunter fish”, Besmir Elezi, i cili ka në koncesion liqenin e Osllomesë dhe lumenjtë thotë se ka punuar mjaftueshëm por mbeten ende punë për t’u bërë.
+
+Edhe pse shoqata e ka shtruar rrugën me rërë megjithatë rruga deri tek liqeni lë për të dëshiruar. Ky liqen ka filluar të bëhet atraktiv viteve pasi po shfrytëzohet nga peshkatarët, megjithatë mbetet ende shumë për t’u bërë që të mund të shfrytëzohet si atraksion për qytetarët.
+
+<img id="liq-img" src="556026051_10235350574562731_5767457150214582139_n.jpg">  
+</div>
+ 
+<div id="lumi" class="card">
+  <h2><i>Lumi</i></h2>
+  <br>
+  <p>
+    Fshati Garanë e posedon edhe lumin. <br>Lumi i fshatit Garanë rrjedh pranë vendbanimit dhe është një nga bukuritë natyrore të zonës. Uji i pastër dhe natyra përreth e bëjnë atë një vend të përshtatshëm për shëtitje, pushim dhe rekreacion. Gjatë pranverës dhe verës lumi është veçanërisht i bukur, pasi rrethohet nga gjelbërimi dhe peizazhet malore.
+  </p>
+  <img id="lum-img" src="viber_image_2026-06-17_13-04-59-948.jpg">  
+</div>
+    
+
+<button  style= "font-size: 20px; margin-left: 20px; background-color: rgb(4, 63, 4); color: white;" id="topBtn">⬆</button>
+    <br>
+      <div class="slide1show">
+  <button class="galeri1" id="prev1">⬅</button>
+
+  <img id="slide1Img" src="viber_image_2026-06-08_20-43-51-583.jpg">
+
+  <button class="galeri1" id="next1">➡</button>
+</div>
+
+<br>
+
+<button id="play1">⏸ Pause</button>
+</a>
+
+    </div>
+
+<br>
+
+</section>
+  <footer>&copy; Made by Fatjon Sadiku 2026 / Email: sadikufatjon078@gmail.com 
+        <br>
+        <div id="kontakt">
+        <a href="https://mail.google.com/mail/?view=cm&to=sadikufatjon078@gmail.com">
+            Na kontakto
+        </a>
+        </div>
+        
+
+    </footer>
+
+ <script>
+    const btn = document.getElementById("toggleBtn");
+
+// fillon me light
+document.body.classList.add("light");
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("green");
+  document.body.classList.toggle("light");
+});
+window.addEventListener("load", function () {
+  document.getElementById("card").classList.add("show");
+});
+
+let btn1 = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+    if(window.scrollY > 300){
+        btn1.style.display = "block";
+    }else{
+        btn1.style.display = "none";
+    }
+
+};
+
+btn1.onclick = function(){
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+};
+
+let images = ["518378235_10232749044727570_3776643281568085116_n.jpg","555599497_10235350572082669_8585849729678832206_n (1).jpg","634733835_2051298075711005_6763127274033175911_n.jpg","556026051_10235350574562731_5767457150214582139_n.jpg","632456870_2051298262377653_5103772328562272062_n.jpg","631607980_2051298329044313_5855186280986432873_n.jpg","viber_image_2026-06-17_13-04-59-989.jpg","viber_image_2026-06-17_13-05-00-368.jpg","viber_image_2026-06-17_13-05-01-879.jpg"];
+
+let index = 0;
+let interval = null;
+let running = true;
+
+let img = document.getElementById("slide1Img");
+
+function showImage() {
+  img.style.opacity = 0;
+
+  setTimeout(() => {
+    img.src = images[index];
+    img.style.opacity = 1;
+  }, 300);
+}
+
+function nextImage() {
+  index++;
+  if (index >= images.length) index = 0;
+  showImage();
+}
+
+function prevImage() {
+  index--;
+  if (index < 0) index = images.length - 1;
+  showImage();
+}
+
+function startAuto() {
+  interval = setInterval(nextImage, 3000);
+}
+
+function stopAuto() {
+  clearInterval(interval);
+}
+
+document.getElementById("next1").onclick = nextImage;
+document.getElementById("prev1").onclick = prevImage;
+
+document.getElementById("play1").onclick = function () {
+  if (running) {
+    stopAuto();
+    this.textContent = "▶ Play";
+  } else {
+    startAuto();
+    this.textContent = "⏸ Pause";
+  }
+  running = !running;
+};
+
+startAuto();
+
+</script>
+
+</body>
+</html>
