@@ -183,7 +183,8 @@ nav ul li a:hover {
 }
 
 .xhamiI {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Screenshot 2026-06-09 235022.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("viber_image_2026-06-09_23-12-12-430.jpg");
+    background-size: cover;
 }
 
 .liqen {
@@ -325,8 +326,8 @@ nav ul li a:hover {
 }
 
 #boksi {
-    background: linear-gradient(135deg, #433c3c, #f0f0f0);
-    box-shadow: 5px 4px 2px rgb(0, 0, 0);
+     border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     height: auto;
 }
 
